@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* .container-fluid .wrapper a {
+    padding: 0 1rem;
+} */
+
+.table thead tr {
+    text-align: center;
+}
+
+.logo {
+    border-radius: 20%;  
+}
