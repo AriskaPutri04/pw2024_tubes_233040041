@@ -33,17 +33,18 @@ if( isset($_POST["cari"]) ) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>SMKN Purwakarta</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
 
     <style>
       body {
         background-color: whitesmoke;
-      }
-
-      a {
-        font-family: "Playfair Display", serif;
-      }    
+        font-family: "Vollkorn", serif;
+      } 
     </style>
   </head>
 
@@ -62,11 +63,18 @@ if( isset($_POST["cari"]) ) {
             </svg>
           </a>
           <p style="Color: White; padding-right: 1rem;">|</p>
-          <a href="logout.php">
-            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-bar-right" viewBox="0 0 16 16" style="Color: White">
-              <path fill-rule="evenodd" d="M6 8a.5.5 0 0 0 .5.5h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L12.293 7.5H6.5A.5.5 0 0 0 6 8m-2.5 7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5"/>
+          <div class="btn-group">
+            <button type="button" class="btn btn-outline-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-square-fill" viewBox="0 0 16 16">
+              <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6z"/>
             </svg>
-          </a>
+            <span>Menu</span>
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="user/index2.php">Halaman User</a></li>
+              <li><a class="dropdown-item" href="logout.php">Logout</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -77,11 +85,6 @@ if( isset($_POST["cari"]) ) {
         <button type="button" class="btn btn-success" style="box-shadow: 2px 2px 2px darkgreen">Tambah Data</button>
         <br>
     </a>
-
-      <!-- <form action="" method="post">
-        <input type="text"  size="35" autofocus placeholder="Search..." >
-        <button type="submit" >Search!</button>
-      </form> -->
 
       <nav class="navbar bg-body-tertiary" style="float: right; margin: 1px;">
         <div class="" >
@@ -118,6 +121,7 @@ if( isset($_POST["cari"]) ) {
                     <td><?= $row["alamat"]; ?></td>
                     <td><?= $row["informasi"];?></td>
                     <td style="text-align:center"><?= $row["akreditasi"]; ?></td>
+                    
                     <td> 
                         <a href="ubah.php?id=<?= $row["id"]; ?>" class="text-decoration-none badge text-bg-warning">ubah</a>  
                         <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Yakin menghapus data ini?');" class="text-decoration-none badge badge text-bg-danger">hapus</a>
@@ -159,7 +163,7 @@ if( isset($_POST["cari"]) ) {
 
     <script src="js/script.js"></script>
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 
 </html>

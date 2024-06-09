@@ -92,6 +92,11 @@ if ( isset($_POST["submit"]) ) {
             <input type="text" class="form-control" name="akreditasi" id="akreditasi" style="box-shadow: 1px 1px 1px blue"
             required>
         </div>
+        <div class="mb-3">
+            <label for="id_akreditasi" class="form-label" style="color: white; font-size:18px; text-shadow: 4px 4px 4px blue">Id Akreditasi : </label>
+            <input type="text" class="form-control" name="id_akreditasi" id="id_akreditasi" style="box-shadow: 1px 1px 1px blue" placeholder="1 = A; 2 = B; 3 = C"
+            required>
+        </div>
         <div class="mb-3"> 
             <label for="gambar" class="form-label" style="color: white; font-size:18px; text-shadow: 4px 4px 4px blue">Gambar : </label>
             <input class="form-control form-control-sm" type="file" name="gambar" id="gambar" style="box-shadow: 1px 1px 1px blue"

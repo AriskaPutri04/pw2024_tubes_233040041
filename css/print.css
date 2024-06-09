@@ -3,12 +3,12 @@ table tr th,
     background-color: rgba(0, 0, 0, 0.842);
     color: white;
 }
-
+ 
 td {
     background-color:rgb(188, 235, 255);
 }
 
 h1 {
     color: rgb(1, 14, 133);
-    text-shadow: 1.px 1.7px 1.7px rgb(186, 209, 255);
+    text-shadow: 1.7px 1.7px 1.7px rgb(186, 209, 255);
 }

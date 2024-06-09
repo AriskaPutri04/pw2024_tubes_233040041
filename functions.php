@@ -20,6 +20,7 @@ function tambah($data) {
     $alamat = htmlspecialchars($data["alamat"]);
     $informasi = htmlspecialchars($data["informasi"]);
     $akreditasi = htmlspecialchars($data["akreditasi"]);
+    $id_akreditasi = htmlspecialchars($data["id_akreditasi"]);
 
     // upload gambar
     $gambar = upload();
@@ -27,9 +28,9 @@ function tambah($data) {
         return false;
     }
 
-    $query = "INSERT INTO smkn
+    $query = "INSERT INTO smkn 
                 VALUES 
-                (NULL, '$nama', ' $alamat', ' $informasi', '$akreditasi', '$gambar')
+                (NULL, '$nama', ' $alamat', ' $informasi', '$akreditasi', '$gambar', '$id_akreditasi' )
               ";
     mysqli_query($conn, $query);  
 
@@ -99,6 +100,7 @@ function ubah($data) {
     $informasi = htmlspecialchars($data["informasi"]);
     $akreditasi = htmlspecialchars($data["akreditasi"]);
     $gambarLama = htmlspecialchars($data["gambarLama"]);
+    $id_akreditasi = htmlspecialchars($data["id_akreditasi"]);
    
     // cek apakah user pilih gambar baru atau lama
     if( $_FILES['gambar']['error'] === 4 ) {
@@ -112,7 +114,8 @@ function ubah($data) {
                 alamat = '$alamat',
                 informasi = '$informasi',
                 akreditasi = '$akreditasi', 
-                gambar = '$gambar'
+                gambar = '$gambar',
+                id_akreditasi = '$id_akreditasi'
                 WHERE id = $id
             ";
 
