@@ -1,0 +1,36 @@
+.navbar {
+    background-color: rgb(97, 109, 206);
+}
+
+.jumbotron {
+    padding-top: 10rem;      
+    background-color: #a5c0ff;
+}
+
+.jumbotron p {
+    padding-top: 1rem;
+    text-shadow: 1px 1px 1px rgb(4, 75, 217);
+}
+
+.logox {
+    width:"200px" ;
+    height:"200px";
+    border-radius: 40%;  
+    box-shadow:  3px 3px 3px rgb(0, 56, 146);
+}
+
+#about {
+    background-color: #c1d3fe;
+  }
+
+#akreditasi {
+    background-color: #a5c0ff;
+} 
+
+#smkn {
+    background-color: #c1d3fe;
+}
+
+section {
+    padding-top: 6rem;
+  }
